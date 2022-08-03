@@ -1,0 +1,82 @@
+<mat-card class="register-card">
+    <mat-card-title class="register-card-title">PROFILE</mat-card-title>
+    <mat-accordion class="example-headers-align" multi>
+        <mat-expansion-panel [expanded]="true" class="expansion-panel">
+            <mat-expansion-panel-header>
+                <mat-panel-title> Personal data </mat-panel-title>
+                <mat-panel-description>
+                    Enter Your First and Last Name
+                    <mat-icon>account_circle</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>First name</mat-label>
+                    <input matInput [value]="userData.firstName" />
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Last name</mat-label>
+                    <input matInput [value]="userData.lastName" />
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true" class="expansion-panel">
+            <mat-expansion-panel-header>
+                <mat-panel-title> Education Details </mat-panel-title>
+                <mat-panel-description>
+                    Enter Your Education Details
+                    <mat-icon>school</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Degree</mat-label>
+                    <input matInput [value]="userData.degree" />
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Course</mat-label>
+                    <input matInput [value]="userData.course" />
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel [expanded]="true" class="expansion-panel">
+            <mat-expansion-panel-header>
+                <mat-panel-title> Date of Birth </mat-panel-title>
+                <mat-panel-description>
+                    Inform your date of birth and age
+                    <mat-icon>date_range</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker" (focus)="picker.open()" readonly
+                        [value]="userData.dateOfBirth" />
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Age</mat-label>
+                    <input matInput type="number" min="1" [value]="userData.age" />
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel [expanded]="true" class="expansion-panel">
+            <mat-expansion-panel-header>
+                <mat-panel-title> Email & Password </mat-panel-title>
+                <mat-panel-description>
+                    Enter Your Email and Password
+                    <mat-icon>email</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div>
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput [value]="userData.email" />
+                </mat-form-field>
+            </div>
+        </mat-expansion-panel>
+        <button mat-raised-button color="primary" type="submit" (click)="backToDashBoard()">BACK</button>
+    </mat-accordion>
+</mat-card>

@@ -1,0 +1,179 @@
+.english-activity-portal {
+  background-color: #f3f7f7;
+}
+
+.english-activity-portal-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.english-subject-container {
+  min-height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 165px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  min-width: 1024px;
+  max-width: 1240px;
+  display: flex;
+  flex: 1;
+}
+
+.container-content-subject-name {
+  justify-content: space-between;
+}
+
+.container-content-progressbar {
+  padding-left: 680px;
+}
+
+.container-content-logo {
+  padding-left: 80px;
+}
+
+.point-left {
+  color: #d0883c;
+}
+
+.english-activity-card {
+  box-shadow: rgb(0 0 0 / 20%) 0px 6px 16px 0px;
+  width: 800px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.english-activity-level-title {
+  background-color: var(--card-shadow-2);
+}
+
+.english-activity-description {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+  align-items: center;
+}
+
+.english-activity-favorite-icon {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-left: 353px;
+}
+
+.english-activity-button {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-left: auto;
+  background-color: rgb(27, 169, 76);
+}
+
+.filter-label {
+  margin-bottom: 10px;
+  color: #738f93;
+  text-transform: uppercase;
+}
+
+.status-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+.status-radio-button {
+  margin: 5px;
+  color: black;
+}
+
+.levels {
+  width: 100% !important;
+  left: -300px !important;
+}
+
+.filters {
+  width: 100% !important;
+  left: 350px !important;
+}
+
+.english-activity-filter {
+  padding-top: -15px;
+}
+
+.level-content {
+  flex-grow: 1;
+}
+
+.level-list {
+  color: #f3f7f7;
+  font-size: 14px;
+}
+
+.level-container {
+  box-sizing: border-box;
+  padding-right: 20px;
+  padding-left: 20px;
+  min-width: 1024px;
+  max-width: 1240px;
+  width: 100%;
+}
+
+.level-sub-container {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+}
+
+.level-card {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+  flex: 1;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  min-width: 0;
+}
+
+.level-list-item {
+  margin-bottom: 100px;
+}
+
+section {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.filter-section {
+  padding-left: 50px;
+}
+
+.spinner {
+  padding-left: 560px;
+  padding-top: 206px;
+}

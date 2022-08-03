@@ -1,0 +1,83 @@
+.spacer {
+    flex: auto;
+}
+
+.spinner-margin {
+    margin: 0 10px;
+    top: 13px;
+    left: 49px;
+}
+
+.dashboard-icons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rating-icon {
+    background-color: #f4f4f4;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.progress-icon {
+    /* background-color: #f4f4f4;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+    margin-left: 40px;
+    margin-right: -73px; */
+    display: inline-block;
+    position: relative;
+}
+
+.trophy-image {
+    /* max-width: 100%; */
+    position: absolute;
+    /* max-height: 100%; */
+    top: 22px;
+    left: -4px;
+    height: 24px;
+    width: 168px;
+    clip-path: circle(45% at 50% 49%);
+}
+
+.user-icon {
+    background-color: #f4f4f4;
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+    padding-left: 17px;
+}
+
+.mat-form-field+.mat-form-field {
+    margin-left: 8px;
+}
+
+.dashboard-accordion {
+    font-size: 40px;
+}
+
+.english-card {
+    max-width: 400px;
+}
+
+.computerscience-card {
+    max-width: 400px;
+}
+
+.subjects-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.spinner {
+    padding-left: 560px;
+    padding-top: 206px;
+}

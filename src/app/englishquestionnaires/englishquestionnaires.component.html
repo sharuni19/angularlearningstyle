@@ -1,0 +1,810 @@
+<div *ngIf="task1" class="english-questionnaire-container">
+    <form [formGroup]="predictionForm" (submit)="predictLearningStyle()" novalidate>
+        <mat-card>
+            <mat-card-title>What Does VARK Stands For ?</mat-card-title>
+            <mat-card-content>
+                <mat-list role="list">
+                    <mat-list-item role="listitem">V- Visual ( Learning by seeing)</mat-list-item>
+                    <mat-list-item role="listitem">A- Aural ( Learning by speaking)</mat-list-item>
+                    <mat-list-item role="listitem">R- Read/write (Learning by Reading and writing)</mat-list-item>
+                    <mat-list-item role="listitem">K- kinaesthetic (Learning by doing,acting and real-life
+                        examples)</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>What kind of book would you like to read?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionOneAnswer">
+                    <mat-radio-button class="question-radio-button" value="A book with lots of pictures in it">A
+                        book
+                        with lots of pictures in it
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="A book with CD">A book with CD
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="A book with lots of answers to practice">
+                        A
+                        book with lots of answers to practice
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="A book with word searches or crossword puzzles">A book with word searches or
+                        crossword
+                        puzzles
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>When you are not sure how to spell a word, what are you most likely to
+                do?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionTwoAnswer">
+                    <mat-radio-button class="question-radio-button"
+                        value="To understand the spelling by watching video and create mind map">To understand the
+                        spelling by watching video and
+                        create
+                        mind map
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Spell it out loud to see if it sounds right">
+                        Spell it out loud to see if it sounds right
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Write it down to see if it looks right">
+                        Write
+                        it down to see if it looks right
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Trace the letters in the air (finger spelling)">Trace the letters in the air (finger
+                        spelling)
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>What's the best way for you to study for a test?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionThreeAnswer">
+                    <mat-radio-button class="question-radio-button"
+                        value="The book or your notes and review pictures or charts                    ">The book or
+                        your notes and review pictures or charts
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Have someone ask you questions that you can answer out loud">Have someone ask you
+                        questions that you can answer
+                        out
+                        loud
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Read and write the answer for the questions and practice">Read and write the answer
+                        for
+                        the questions and
+                        practice
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Make up index cards that you can review">
+                        Make
+                        up index cards that you can review
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>What is the best way for you to remember a Grammar?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionFourAnswer">
+                    <mat-radio-button class="question-radio-button" value="Create flash cards to remeber a sentence">
+                        Create flash cards to remeber a sentence
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Listen the sentence carefully by audio type of questions">Listen the sentence
+                        carefully
+                        by audio type of
+                        questions
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Write it down in the notepad and read">
+                        Write
+                        it down in the notepad and read
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Make Physical interactions and learn">
+                        Make
+                        Physical interactions and learn
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>How you will be memorize the poem?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionFiveAnswer">
+                    <mat-radio-button class="question-radio-button" value="Use picture books to Visualize">Use
+                        picture
+                        books to Visualize
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Say it loud and record and listen twice">
+                        Say
+                        it loud and record and listen twice
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Read and write the poem twice">Read and
+                        write
+                        the poem twice
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Do actions and play games related to the poem">Do actions and play games related to
+                        the
+                        poem
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>What type method you will be learn for english subject?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionSixAnswer">
+                    <mat-radio-button class="question-radio-button"
+                        value="Studying on your own using different tools like books,magazines,comics">Studying on
+                        your
+                        own using different tools like
+                        books,
+                        magazines,
+                        comics
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Listen and read by subscribing English subject youtube channel">Listen and read by
+                        subscribing English subject
+                        youtube
+                        channel
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Read and write what you have learn">Read
+                        and
+                        write what you have learn
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Go to classes">Go to classes
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>What is the best way to learn lessons for English
+                subjects?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionSevenAnswer">
+                    <mat-radio-button class="question-radio-button"
+                        value="Study phrases not words and create charts or mind map">Study phrases not words and
+                        create
+                        charts or mind
+                        map
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Learn by listening to the video">Learn by
+                        listening to the video
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Read and write the whole lessons and understand the concept">Read and write the whole
+                        lessons and understand the
+                        concept
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Take an online lesson with activities">
+                        Take
+                        an online lesson with activities
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>How do you learn comprehension?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionEightAnswer">
+                    <mat-radio-button class="question-radio-button"
+                        value="Picture of the things that are being described in the text">Picture of the things
+                        that
+                        are being described in
+                        the
+                        text
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Ask questions about the text and answer and say it loud">Ask questions about the text
+                        and
+                        answer and say it
+                        loud
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Summarize the main points of a text and practice">Summarize the main points of a text
+                        and
+                        practice
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Reading frequently will help to learn new words and interpret different meanings">
+                        Reading
+                        frequently will help to learn new words and
+                        interpret
+                        different meanings
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <button mat-raised-button color="primary" type="submit" style="text-align:center"
+            [disabled]="!predictionForm.valid">
+            Submit
+        </button>
+    </form>
+</div>
+
+<!-- VISUAL LEVELS -->
+
+<div *ngIf="visualLevel2" class="english-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 2</h1>
+    <h2>A Stanger wants to visit a library. Write a steps to guide him to reach his destination
+    </h2>
+    <div>
+        <img src="assets/EnglishVisualLevel2.JPG">
+    </div>
+    <div>
+        <h3>Step One</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionOneAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>Step Two</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionTwoAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>Step Three</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionThreeAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>Step Four</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionFourAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitVisualLevel2()">
+        Submit
+    </button>
+</div>
+<div *ngIf="visualLevel3" class="english-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 3</h1>
+    <h2>With the help of active and passive voice chart answer the following MCQ
+    </h2>
+    <div>
+        <img src="assets/EnglishVisualLevel3.png">
+    </div>
+    <div style="text-align:left;padding-left:25px">
+        <h3>1.It ____ since yesterday </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionOneAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q1" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>2.She ____ for long now </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTwoAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q2" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>3.As the patient could not walk he _____ home in a wheel chair </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionThreeAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q3" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>4. Shriya has sung three songs </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFourAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q4" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>5.The farmer was plowing the lands</h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q5" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>6.He will call me </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionSixAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q6" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>7.You must help him </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionSevenAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q7" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>8. Has anybody seen your bike? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionEightAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q8" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>9.We ought to have helped Sam.</h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionNineAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q9" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>10. We have launched a massive tribal welfare program. </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTenAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of visualLevel3Q10" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitVisualLevel3()">
+        Submit
+    </button>
+</div>
+<!-- VISUAL LEVELS END -->
+<!-- READING LEVELS -->
+<div *ngIf="readingLevel2" class="english-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 2</h1>
+    <h2>Read the following passage and answer the below questions</h2>
+    <div style="text-align:left;padding-left:25px">
+        <p>As a young girl Mary Read's mother made her dress up as a boy, in order to claim an inheritance for which
+            only a boy was eligible. Although it wasn't a very clever plan, Mary's grandmother was led to believe that
+            she had a grandson. She sent the family money until her death. After her death Mary continued to wear the
+            clothes of a boy and would clean the shoes of the people that passed by to earn some money. When she grew
+            up, she joined the military as a seaman on an English warship and later became a foot soldier in Flanders.
+            She later joined a horse regiment and it was here that Mary fell in love with one of her fellow-soldiers.
+            She had to admit that she was a girl. The others thought it was a humorous situation. On their wedding day,
+            Mary and her husband were given wonderful gifts and they settled down to run an inn called the Three
+            Horseshoes. Her husband died at a young age and Mary put on her men's clothes and returned to sea. The ship
+            sailed for the West Indies, where it was attacked by a pirate ship captained by Jack Rackham. Mary joined
+            the crew and became rich quickly. One day the governor of one of the islands heard that Rackham and his crew
+            were close by. He sent an armed sloop to capture them, but as soon as they saw the enemy, the pirates
+            started shooting. When they saw that they were going to lose the battle, they ran and hid below deck. Mary
+            and another female pirate stayed on deck to fight, but they were soon overpowered and brought to trial. She
+            was sentenced to hang, but escaped the noose by dying of fever in prison.
+        </p>
+        <h3>1.Mary Read was raised as a boy </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionOneAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel2Q1" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>2.Mary ... to earn a living </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTwoAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel2Q2" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>3.Mary owned a _______ after she was married </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionThreeAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel2Q3" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>4. __________ serve in the military </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFourAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel2Q4" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>5."The other soldiers thought it was a HUMOROUS situation." This means that they thought it was ______</h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel2Q5" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>6.Mary was travelling to the _______ when the ship was captured by pirates </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel2Q6" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>7.Mary fought as a foot soldier in ________ </h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionSevenAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+    </div>
+
+
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitReadingLevel2()">
+        Submit
+    </button>
+</div>
+<div *ngIf="readingLevel3" class="english-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 3</h1>
+    <h2>Read the following passage and answer the below questions</h2>
+    <div style="text-align:left;padding-left:25px">
+        <p>We should preserve nature to preserve life and beauty. A beautiful landscape, full of green vegetation, will
+            not just attract our attention but will fill us with infinite satisfaction. Unfortunately, because of
+            modernisation, much of nature is now yielding to towns, roads and industrial areas. In a few places, some
+            natural reserves are now being carved out to avert the danger of destroying nature completely. Man will
+            perish without nature, so modern man should continue this struggle to save plants, which give us oxygen,
+            from extinction. Moreover, nature is essential to man's health.</p>
+        <h3>1. Which one of the following is the correct statement? According to the passage _______.</h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionOneAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel3Q1" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <p>This country now needs a new equilibrium, a new spirit of national reconciliation that can be brought about
+            only by moving forward to the new frontiers of true equality, fuller opportunity and greater compassion for
+            the weaker sections of its people. Our goal is total freedom for the people that can fully reflect their
+            urges and aspirations for a better life. We cannot remain content by merely reliving our past even under the
+            condition of complete freedom, without a matching concept of the present and the future. We can survive only
+            by seizing every constructive opportunity that can offer a creative alternative to the legacies of the past.
+            It is only through such a lofty endeavour that the country can discover itself with a new sense of adventure
+            and faith in our selves.</p>
+        <h3>2.The aim of the nation is _________. </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTwoAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of readingLevel3Q2" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <p>Guru Gobind Singh, the last of the ten Sikh Gurus, was a great son of India. He led India to sublime heights
+            of glory. He brought about moral resurgence and created order out of disorderly social conditions. He was a
+            multifaceted personality. He was a poet, a soldier, a statement, a leader, and a true socialist, all in one.
+            He put life into the dying social order by giving it a wholly new outlook.</p>
+        <h3>3.Guru Gobind Singh was a ___________ of India</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionThreeAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <p>A giant in stature, with long hair, wearing a bottle green fur lined overcoat and round seal skin cap on his
+            head, Oscar Wilde arrived in New York on 2nd of January 1882 on a lecture tour. He was mobbed by reporters
+            who asked him (much to his irritation) unimportant questions such as how he liked his eggs fried? How he
+            trimmed his finger nails? And what temperature he preferred his bath to be?
+            His answers showed a total lack of interest.
+            However, when he stepped ashore, the customs official asked, “Have you anything to declare?” and with
+            customary style. Wilde replied, “No, I have nothing to declare (pause) except my genius.” Few remarks in
+            history have travelled as widely and as quickly as that one.
+        </p>
+        <h3>4. Mention two details of Oscar’s physical appearance when he came to New York?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionFourAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>5. Why did he come to New York?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionFiveAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>6.Oscar Wilde was not interested in answering the questions of reporters. Why?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionSixAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>7.What does Oscar Wilde’s answer to the custom officer’s questions show?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionSevenAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>8. Find a word in the passage which means “exceptional ability in a person”.</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionEightAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+    </div>
+
+
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitReadingLevel3()">
+        Submit
+    </button>
+</div>
+<!-- READING LEVELS END -->
+<!-- AURAL LEVELS -->
+<div *ngIf="auralLevel2" class="english-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 2</h1>
+    <p>Listen to the audio and answer the questions</p>
+    <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false" muted="muted"
+        [displayPlaylist]="msaapDisplayPlayList" (trackEnded)="onEnded($event)"
+        [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+        [disablePositionSlider]="msaapDisablePositionSlider" [displayArtist]="msaapDisplayArtist"
+        [displayDuration]="msaapDisplayDuration" [expanded]="true"></ngx-audio-player>
+    <div>
+        <h2>Questions 1–4 Complete below. Write NO MORE THAN TWO WORDS AND/OR A NUMBER for each answer.</h2>
+        <h3>City Bank Customer Service Log</h3>
+        <p> Customer name: David 1.<input [(ngModel)]="questionOneAnswer" /></p>
+        <p>Phone: 1968 023 - 561- 055</p>
+        <p>D.O.B.: 18 / 02 / 1968</p>
+        <h3>Customer’s Term Deposit details:</h3>
+        <p> Amount: $18,000</p>
+        <p>Term: 2 <input [(ngModel)]="questionTwoAnswer"></p>
+        <p>Interest rate: 3.45% per annum</p>
+        <h3>Current Term Deposit interest rates:</h3>
+        <p>1 year 3.65% per annum 2 years</p>
+        <p>3 <input [(ngModel)]="questionThreeAnswer"> % per annum</p>
+        <p>4 <input [(ngModel)]="questionFourAnswer"> Term Deposits</p>
+        <p>Minimum deposit: $20,000</p>
+        <h2>Questions 5–10</h2>
+        <p>5 <input [(ngModel)]="questionFiveAnswer"> 28%</p>
+        <h3>Tax rate: </h3>
+        <p>Investment returns: Depend on 6 <input [(ngModel)]="questionSixAnswer"></p>
+        <p>Term Effective: 2 years</p>
+        <h3>Rate of return :</h3>
+        <p>Salary $48,001 – $70,000 3.75% per annum</p>
+        <p> Salary $70,001 – 7 $<input [(ngModel)]="questionSevenAnswer">3.92. % per annum</p>
+        <p>Minimum investment amount: $10,000</p>
+        <p> Hidden charges/fees: 8 <input [(ngModel)]="questionEightAnswer"></p>
+        <p>Interest payment options: monthly, 9 <input [(ngModel)]="questionNineAnswer"> 6-monthly, annually</p>
+        <p>Application options: online 10 <input [(ngModel)]="questionTenAnswer"> in person</p>
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitAuralLevel2Data()">
+        Submit
+    </button>
+</div>
+<div *ngIf="auralLevel3" class="english-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 3</h1>
+    <p>Listen to the audio and answer the questions</p>
+    <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false" muted="muted"
+        [displayPlaylist]="msaapDisplayPlayList" (trackEnded)="onEnded($event)"
+        [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+        [disablePositionSlider]="msaapDisablePositionSlider" [displayArtist]="msaapDisplayArtist"
+        [displayDuration]="msaapDisplayDuration" [expanded]="true"></ngx-audio-player>
+    <div style="text-align:left;padding-left:25px">
+        <h2>Questions 1–5 Choose the correct letter, A, B or C</h2>
+        <h3>1.The September Celebration day is held </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionOneAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q1" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>2.The park was first built in </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTwoAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q2" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>3.The park still uses </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionThreeAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q3" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>4.The Hurricane roller-coaster is </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFourAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q4" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>5.The rides with a height limit are coded </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q5" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h2>Questions 6–10</h2>
+        <h3>Food options: </h3>
+        <p>• Italian, Chinese, etc. at the Food Court </p>
+        <p>• hamburgers, sandwiches, etc. at 6 <input [(ngModel)]="questionSixAnswer"></p>
+        <h3>Special Events: Parade</h3>
+        <p>• Starts at noon</p>
+        <p>• On the 7 <input [(ngModel)]="questionSevenAnswer"></p>
+        <p>• Run by final year high school students Concert</p>
+        <p>• At the amphitheatre</p>
+        <p>• Theme: 8 <input [(ngModel)]="questionEightAnswer"></p>
+        <p>• Starts at 7:00 Safety and Security</p>
+        <p>• Ten 9 <input [(ngModel)]="questionNineAnswer">centres in the park</p>
+        <p>• Children ask any staff member for help </p>
+        <p>• Ask security team at the 10 <input [(ngModel)]="questionTenAnswer"></p>
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitAuralLevel3Data()">
+        Submit
+    </button>
+</div>
+<!-- AURAL LEVEL ENDS -->
+<!-- KINESTIC LEVELS -->
+<div *ngIf="kinesticLevel2" class="english-questionnaire-container">
+    <h1 sstyle="text-align:center">LEVEL 2</h1>
+    <h2>Identfy the words in the crossword puzzle based on the clues</h2>
+    <div class="crossword-puzzles">
+        <div class="crossword-container">
+            <div class="crossword-sub-container">
+                <mat-grid-list cols="20" rowHeight="1:1" style="width:662px">
+                    <mat-grid-tile *ngFor="let tile of tiles" [style.background]="tile.color">
+                        <mat-form-field style="width:100%" appearance="fill" *ngIf="tile.color=='white'">
+                            <input matInput maxlength="1" class="stylecrosswordinput"
+                                (input)="addTileValueEvent($event,tile)" />
+                        </mat-form-field>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <section style="padding-left:150px">
+                    <h2 class="filter-label">CLUES</h2>
+                    <mat-divider></mat-divider>
+                    <h3 class="filter-label">ACROSS</h3>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem" *ngFor="let item of acrossClues">{{item}}</mat-list-item>
+                    </mat-list>
+                    <mat-divider></mat-divider>
+                    <h3 class="filter-label">DOWN</h3>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem" *ngFor="let item of downclues">{{item}}</mat-list-item>
+                    </mat-list>
+                    <mat-divider></mat-divider>
+                    <h3 class="filter-label">REVERSE</h3>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem" *ngFor="let item of reverseClues">{{item}}</mat-list-item>
+                    </mat-list>
+                    <mat-divider></mat-divider>
+                    <button mat-raised-button color="primary" type="submit"
+                        style="text-align:center;margin-left:-650px;margin-top:20px" (click)="submitKinesticLevel2()">
+                        Submit
+                    </button>
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+<div *ngIf="kinesticLevel3" class="english-questionnaire-container">
+    <h1 sstyle="text-align:center">LEVEL 3</h1>
+    <h2>Identify the missing letters on the following items</h2>
+    <p>1.She often ______ to the Cinema because she loves movies.</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,0,'Q1')" />
+        <input class="answerinput" matInput maxlength="1" value="o" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q1')" />
+        <input class="answerinput" matInput maxlength="1" value="s" />
+    </div>
+    <p style="padding-left:30px">2. We ______ to a new place, as the old place was too small for us.</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="s" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" value="f" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,4,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" value="d" />
+    </div>
+    <p style="padding-right:77px">3. Ram had ____ football in the same club as me.</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,0,'Q3')" />
+        <input class="answerinput" matInput maxlength="1" value="l" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q3')" />
+        <input class="answerinput" matInput maxlength="1" value="y" />
+    </div>
+    <p>4. The fire had _________ the huts before the fire brigade came</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="b" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q4')" />
+        <input class="answerinput" matInput maxlength="1" value="r" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,3,'Q4')" />
+        <input class="answerinput" matInput maxlength="1" value="t" />
+    </div>
+    <p style="padding-right:215px">5.I have _________ my work.</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="d" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q5')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q5')" />
+        <input class="answerinput" matInput maxlength="1" value="e" />
+
+    </div>
+    <p style="padding-right:175px">6.Don’t make a noise, she is ______</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="s" />
+        <input class="answerinput" matInput maxlength="1" value="l" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,3,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" value="p" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,6,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" value="g" />
+    </div>
+    <p style="padding-right:175px">7.Will you go to _________a movie ?</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="s" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q7')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q7')" />
+    </div>
+    <p style="padding-right:100px">8.He has been ______ the plants for two hours.</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="w" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q8')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q8')" />
+        <input class="answerinput" matInput maxlength="1" value="e" />
+        <input class="answerinput" matInput maxlength="1" value="r" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q8')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,6,'Q8')" />
+        <input class="answerinput" matInput maxlength="1" value="g" />
+    </div>
+    <p style="padding-right:180px">9.He always ________ up at 5 a.m.</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="g" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q9')" />
+        <input class="answerinput" matInput maxlength="1" value="t" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,3,'Q9')" />
+    </div>
+    <p style="padding-left:115px">10.Since then a new housing estate has _______ built and it has become very noisy.</p>
+    <div class="row">
+        <h2 style="padding-right:20px;padding-top:10px">ANSWER</h2>
+        <input class="answerinput" matInput maxlength="1" value="b" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q10')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q10')" />
+        <input class="answerinput" matInput maxlength="1" value="n" />
+
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:25px"
+        (click)="submitKinesticLevel3()">
+        Submit
+    </button>
+</div>
+<!-- KINESTIC LEVEL ENDS -->
+<div class="spinner" *ngIf="isProgressSpinner">
+    <mat-spinner></mat-spinner>
+</div>

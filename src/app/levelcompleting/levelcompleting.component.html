@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>{{data.heading}}</h1>
+<div mat-dialog-content *ngIf="level1Content">
+    <h2>Your Learning Type for {{data.subject}} is {{data.learningType}}</h2>
+</div>
+<div mat-dialog-content *ngIf="others">
+    <h2>You have Scored {{data.scoredPoints}} out of {{data.totalPoints}}</h2>
+</div>
+<div mat-dialog-content *ngIf="failed">
+    <h2>Please try again</h2>
+</div>
+<div mat-dialog-actions style="text-align:center;padding-left:85px">
+    <button mat-raised-button color="warn" mat-dialog-close>CLOSE</button>
+</div>

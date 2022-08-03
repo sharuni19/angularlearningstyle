@@ -1,0 +1,804 @@
+<div *ngIf="task1" class="computerscience-questionnaire-container">
+    <form [formGroup]="predictionForm" (submit)="predictLearningStyle()" novalidate>
+        <mat-card>
+            <mat-card-title>What Does VARK Stands For ?</mat-card-title>
+            <mat-card-content>
+                <mat-list role="list">
+                    <mat-list-item role="listitem">V- Visual ( Learning by seeing)</mat-list-item>
+                    <mat-list-item role="listitem">A- Aural ( Learning by speaking)</mat-list-item>
+                    <mat-list-item role="listitem">R- Read/write (Learning by Reading and writing)</mat-list-item>
+                    <mat-list-item role="listitem">K- kinaesthetic (Learning by doing,acting and real-life
+                        examples)</mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>How will you learn computer subject?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionOneAnswer">
+                    <mat-radio-button class="question-radio-button" value="Reading the book with Images and diagrams">
+                        Reading the book with Images and diagrams
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Group discussion with friends">Group
+                        discussion with friends
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Ask the person who is experience and practice">Ask the person who is experience and
+                        practice
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Making detailed notes">Making detailed notes
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>How will you learn Programming concepts?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionTwoAnswer">
+                    <mat-radio-button class="question-radio-button" value="Listening to the programming related videos">
+                        Listening to the programming related videos
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Practically developing programs">
+                        Practically developing programs
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Re-writing programs and take notes to revise">Re-writing programs and take notes to
+                        revise
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="With the help of Graphics and visuals">With
+                        the help of Graphics and visuals
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>Which Ms Office tool you will use for this subject?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionThreeAnswer">
+                    <mat-radio-button class="question-radio-button" value="Microsoft Excel, Paint">Microsoft Excel,
+                        Paint
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Microsoft Word">Microsoft Word
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Microsoft word using speak button">Microsoft
+                        word using speak button
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Microsoft Power Point">Microsoft Power Point
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>For the project how will you check the use case?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionFourAnswer">
+                    <mat-radio-button class="question-radio-button" value="By watching video">
+                        By watching video
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Books and website refer">Books and website
+                        refer
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Trying to develop a sample program">Trying to
+                        develop a sample program
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Group discussions with friends">Group
+                        discussions with friends
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>If you like to participate in computer competition which you will join?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionFiveAnswer">
+                    <mat-radio-button class="question-radio-button" value="Hackathon">Hackathon
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Connection game with pictures">Connection
+                        game with pictures
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Paper Presentation">Paper Presentation
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Learnathon">Learnathon
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>Do you prefer instructor or teacher who likes to use?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionSixAnswer">
+                    <mat-radio-button class="question-radio-button" value="Handouts or a text book">Handouts or a text
+                        book
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Discussion and guest speakers">Discussion and
+                        guest speakers
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Field trips,laps and practical section">Field
+                        trips,laps and practical section
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Flow diagrams, charts and slides">Flow
+                        diagrams, charts and slides
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>How will you communicate your project to your professor?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionSevenAnswer">
+                    <mat-radio-button class="question-radio-button" value="By Speaking">By Speaking
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="By describing Images and diagrams">By
+                        describing Images and diagrams
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="By Viewing information in word form">By
+                        Viewing information in word form
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="By Tactile representations">By Tactile
+                        representations
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <mat-card>
+            <mat-card-title>You are about to learn to use a new program on a computer. would you?</mat-card-title>
+            <mat-card-content>
+                <mat-radio-group aria-labelledby="example-radio-group-label" class="question-radio-group"
+                    formControlName="questionEightAnswer">
+                    <mat-radio-button class="question-radio-button" value="Visit the websites and learn">Visit the
+                        websites and learn
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button" value="Ask a friend to show you on a computer">Ask a
+                        friend to show you on a computer
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Telephone a friend and ask questions about it">Telephone a friend and ask questions about
+                        it
+                    </mat-radio-button>
+                    <mat-radio-button class="question-radio-button"
+                        value="Read the manual which comes with the program">Read the manual which comes with the
+                        program
+                    </mat-radio-button>
+                </mat-radio-group>
+            </mat-card-content>
+        </mat-card>
+        <button mat-raised-button color="primary" type="submit" style="text-align:center"
+            [disabled]="!predictionForm.valid">
+            Submit
+        </button>
+    </form>
+</div>
+
+<!-- VISUAL LEVELS -->
+<div *ngIf="visualLevel2" class="computerscience-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 2</h1>
+    <h2>Identify the words based on the below images</h2>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q1.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionOneAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q2.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionTwoAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q3.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionThreeAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q4.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionFourAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q5.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionFiveAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q6.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionSixAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q7.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionSevenAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q8.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionEightAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q9.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionNineAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel2Q10.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionTenAnswer">
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitVisualLevel2()">
+        Submit
+    </button>
+</div>
+<div *ngIf="visualLevel3" class="computerscience-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 3</h1>
+    <h2>Identify the words based on the below images</h2>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel3Q1.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionOneAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel3Q2.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionTwoAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel3Q3.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionThreeAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel3Q4.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionFourAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel3Q5.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionFiveAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel3Q6.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionSixAnswer">
+    </div>
+    <div>
+        <img src="assets/ComputerScienceVisualLevel3Q7.png">
+    </div>
+    <div style="padding-bottom: 20px;">
+        <h3>ANSWER:</h3><input [(ngModel)]="questionSevenAnswer">
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitVisualLevel3()">
+        Submit
+    </button>
+</div>
+
+<!-- VISUAL LEVEL ENDS -->
+<!-- READING LEVELS STARTS-->
+<div *ngIf="readingLevel2" class="computerscience-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 2</h1>
+    <h2>Read the following passage and answer the below questions</h2>
+    <div style="text-align:left;padding-left:25px">
+        <p>One of the greatest advances in modern technology has been the invention of computers.
+            They are widely used in industries and in universities. Now there is hardly any sphere of
+            human life where computers have not been pressed into service of man. We are heading
+            fast towards the day when a computer will be as much part of man’s daily life as a
+            telephone or a calculator.
+            Computers are capable of doing extremely complicated work in all branches of learning.
+            They can solve the most complex mathematical problems or put thousands of unrelated
+            facts in order. These machines can be put to varied uses. For instance, they can provide
+            information on the best way to prevent traffic jams. This whole process by which machines
+            can be used to work for us has been called automation. In the future automation may
+            enable human beings to enjoy more leisure than they do today. The coming of automation
+            is bound to have important social consequences.
+            Some years ago an expert on automation, Sir Leon Bagrit, pointed out that it was a mistake
+            to believe that these machines could hink. There is no possibility that human beings will
+            be "controlled by machines". Though computers are capable of learning from their
+            mistakes and improving on their performance, they need detailed instructions from human
+            beings to operate. They can never, as it were, lead independent lives or "rule the world" by
+            making decisions of their own.
+            Sir Leon said that in future, computers would be developed which would be small enough
+            to carry in the pocket. Ordinary people would then be able to use them to obtain valuable
+            information. Computers could be plugged into a national network and be used like radios.
+            For instance, people going on holiday could be informed about weather conditions. Car
+            drivers can be given alternative routes when there are traffic jams. It will also be possible
+            to make tiny translating machines. This will enable people who do not share a common
+            language to talk to each other without any difficulty or to read foreign publications.</p>
+        <h3>1.What is the greatest advancement in modern technology?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionOneAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>2.What complicated works are computers capable of doing? </h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionTwoAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>3.Write one use of computers</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionThreeAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>4.Explain automation?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionFourAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>5.Why can computers lead independent lives or rule the world?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionFiveAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>6.How would computers as translating machines help people?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionSixAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>7.What was the prediction of Sir Leon about computers in the future? </h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionSevenAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>8.How can computers help people going on holiday?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionEightAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+    </div>
+
+
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitReadingLevel2()">
+        Submit
+    </button>
+</div>
+<div *ngIf="readingLevel3" class="computerscience-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 3</h1>
+    <h2>Read the following passage and answer the below questions</h2>
+    <div style="text-align:left;padding-left:25px">
+        <p>MAIL MERGE: The Mail Merge feature of MS Word can be used to create and send documents containing similar
+            information to many people. Some content in the document is unique for each recipient. The document is typed
+            once. The unique information in each document comes from a list containing the names of the recipients and
+            other required details, called the data source. Mail Merge combines the document and the data source to
+            create a personalized copy for each recipient.</p>
+        <p>Components of Mail Merge:</p>
+        <p>1. Main document: The main document contains the text and graphics to be sent to all the people.</p>
+        <p>2. Data Source: The data source is a file that contains the information to be merged with the main document.
+        </p>
+        <p>3. Merged document: In the main document, we need to identify the information that we wish to change or
+            personalize for each recipient. Each details is represented by a Merge field in the letter.</p>
+        <h3>1.When do we use Mail Merge?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionOneAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>2.Write down the three main components Mail Merge?? </h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionTwoAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>3.What does the Main documents contains?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionThreeAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+        <h3>4.What does the Mail Merge combines?</h3>
+        <mat-form-field style="width:50%" appearance="fill">
+            <mat-label>Answer</mat-label>
+            <textarea matInput [(ngModel)]="questionFourAnswer"></textarea>
+        </mat-form-field>
+        <mat-divider></mat-divider>
+    </div>
+
+
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitReadingLevel3()">
+        Submit
+    </button>
+</div>
+<!-- READING LEVEL ENDS -->
+<!-- AURAL LEVEL STARTS -->
+<div *ngIf="auralLevel2" class="computerscience-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 2</h1>
+    <p>Listen to the audio and answer the questions</p>
+    <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false" muted="muted"
+        [displayPlaylist]="msaapDisplayPlayList" (trackEnded)="onEnded($event)"
+        [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+        [disablePositionSlider]="msaapDisablePositionSlider" [displayArtist]="msaapDisplayArtist"
+        [displayDuration]="msaapDisplayDuration" [expanded]="true"></ngx-audio-player>
+    <div style="text-align:left;padding-left:25px">
+        <h3>1.How many keywords are there in c ? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionOneAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q1" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>2.Which of the following is true for variable names in C? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTwoAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q2" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>3.Which of the following cannot be a variable name in C? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionThreeAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q3" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>.4What is the output of this program?</h3>
+        <p>void main()</p>
+        <p>int x = 10;</p>
+        <p>float x = 10;</p>
+        <p>printf("%d", x)</p>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFourAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q4" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>5.What is the output of this program? </h3>
+        <p>#include stdio.h
+        </p>
+        <p>int main()</p>
+        <p>int x = 10;</p>
+        <p>float x = 10;</p>
+        <p>printf("%d", x)</p>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q5" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>6. What will be the output of the C program?</h3>
+        <p>#include stdio.h
+        </p>
+        <p>int main()</p>
+        <p>int 1_one = 25;</p>
+        <p>printf("%d",1_one);</p>
+        <p>return 0;</p>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionOneAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q6" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>7. What will be the output of the C program?</h3>
+        <p>#include stdio.h
+        </p>
+        <p>int main()</p>
+        <p>int default = 5, a = 3;</p>
+        <p>if(a > 2)</p>
+        <p>printf("%d",default);</p>
+        <p>return 0;</p>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTwoAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q7" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>8. What will be the output of the C program?</h3>
+        <p>#include stdio.h
+        </p>
+        <p>int main()</p>
+        <p>int class;</p>
+        <p>int public = 5;</p>
+        <p>int private = 10;</p>
+        <p>int protected = 15;</p>
+        <p>class = public + private + protected;</p>
+        <p>printf("%d",class);</p>
+        <p>return 0;</p>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionThreeAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q8" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>9. What will be the output of the C program?</h3>
+        <p>#include stdio.h
+        </p>
+        <p>int main()</p>
+        <p>int _int = 5;</p>
+        <p>printf("%d",_int);</p>
+        <p>return 0;</p>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFourAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q9" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>10. What will be the output of the C program?</h3>
+        <p>#include stdio.h
+        </p>
+        <p>int main()</p>
+        <p>int _ = 5;</p>
+        <p>int __=5;</p>
+        <p>int ___ = _ + __;</p>
+        <p>printf("%d",___);</p>
+        <p>return 0;</p>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel2Q10" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitAuralLevel2Data()">
+        Submit
+    </button>
+</div>
+<div *ngIf="auralLevel3" class="computerscience-questionnaire-container">
+    <h1 style="text-align:center">LEVEL 3</h1>
+    <p>Listen to the audio and answer the questions</p>
+    <ngx-audio-player [playlist]="msaapPlaylist" [displayTitle]="msaapDisplayTitle" [autoPlay]="false" muted="muted"
+        [displayPlaylist]="msaapDisplayPlayList" (trackEnded)="onEnded($event)"
+        [displayVolumeControls]="msaapDisplayVolumeControls" [displayRepeatControls]="msaapDisplayRepeatControls"
+        [disablePositionSlider]="msaapDisablePositionSlider" [displayArtist]="msaapDisplayArtist"
+        [displayDuration]="msaapDisplayDuration" [expanded]="true"></ngx-audio-player>
+    <div style="text-align:left;padding-left:25px">
+        <h3>1.Instructions carried out one after another in order is a...</h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionOneAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q1" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>2. Which is the definition of "sequence"? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionTwoAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q2" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>3.Which is the definition of "selection"? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionThreeAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q3" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>4.Which is the definition of "iteration"? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFourAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q4" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>5.In pseudocode, a WHILE loop is ____ </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q5" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>6.Why is iteration important?</h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFourAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q6" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+        <h3>7. Why is selection important? </h3>
+        <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+            [(ngModel)]="questionFiveAnswer">
+            <mat-radio-button class="status-radio-button" *ngFor="let data of auralLevel3Q7" [value]="data">
+                {{ data }}
+            </mat-radio-button>
+        </mat-radio-group>
+        <mat-divider></mat-divider>
+
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:10px"
+        (click)="submitAuralLevel3Data()">
+        Submit
+    </button>
+</div>
+<!-- AURAL LEVEL ENDS -->
+<!-- KINESTIC LEVEL STARTS -->
+<div *ngIf="kinesticLevel2" class="computerscience-questionnaire-container">
+    <h1 sstyle="text-align:center">LEVEL 2</h1>
+    <h2>Identify the words in the crossword puzzle based on the clues</h2>
+    <div class="crossword-puzzles">
+        <div class="crossword-container">
+            <div class="crossword-sub-container">
+                <mat-grid-list cols="11" rowHeight="1:1" style="width:662px">
+                    <mat-grid-tile *ngFor="let tile of tiles" [style.background]="tile.color">
+                        <mat-form-field style="width:100%" appearance="fill" *ngIf="tile.color=='white'">
+                            <input matInput maxlength="1" class="stylecrosswordinput"
+                                (input)="addTileValueEvent($event,tile)" />
+
+                        </mat-form-field>
+                    </mat-grid-tile>
+                </mat-grid-list>
+                <section style="padding-left:150px">
+                    <h2 class="filter-label">CLUES</h2>
+                    <mat-divider></mat-divider>
+                    <h3 class="filter-label">ACROSS</h3>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem" *ngFor="let item of acrossClues">{{item}}</mat-list-item>
+                    </mat-list>
+                    <mat-divider></mat-divider>
+                    <h3 class="filter-label">DOWN</h3>
+                    <mat-list role="list">
+                        <mat-list-item role="listitem" *ngFor="let item of downclues">{{item}}</mat-list-item>
+                    </mat-list>
+                    <mat-divider></mat-divider>
+                    <button mat-raised-button color="primary" type="submit"
+                        style="text-align:center;margin-left:-650px;margin-top:120px" (click)="submitKinesticLevel2()">
+                        Submit
+                    </button>
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div *ngIf="kinesticLevel3" class="computerscience-questionnaire-container">
+    <h1 sstyle="text-align:center">LEVEL 3</h1>
+    <h2>Identify the missing letters on the following items</h2>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="m" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q1')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q1')" />
+        <input class="answerinput" matInput maxlength="1" value="i" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,4,'Q1')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q1')" />
+        <input class="answerinput" matInput maxlength="1" value="r" />
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="k" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" value="b" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,4,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,6,'Q2')" />
+        <input class="answerinput" matInput maxlength="1" value="d" />
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="m" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,0,'Q3')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q3')" />
+        <input class="answerinput" matInput maxlength="1" value="s" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,3,'Q3')" />
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="w" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q4')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q4')" />
+        <input class="answerinput" matInput maxlength="1" value="c" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,4,'Q4')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q4')" />
+        <input class="answerinput" matInput maxlength="1" value="e" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,7,'Q4')" />
+        <input class="answerinput" matInput maxlength="1" value="a" />
+
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,0,'Q5')" />
+        <input class="answerinput" matInput maxlength="1" value="p" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q5')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,3,'Q5')" />
+        <input class="answerinput" matInput maxlength="1" value="k" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q5')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,6,'Q5')" />
+        <input class="answerinput" matInput maxlength="1" value="s" />
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="m" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" value="r" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,4,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" value="p" />
+        <input class="answerinput" matInput maxlength="1" value="h" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,7,'Q6')" />
+        <input class="answerinput" matInput maxlength="1" value="n" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,9,'Q6')" />
+
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="p" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q7')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q7')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,3,'Q7')" />
+        <input class="answerinput" matInput maxlength="1" value="t" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,5,'Q7')" />
+        <input class="answerinput" matInput maxlength="1" value="r" />
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="s" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q8')" />
+        <input class="answerinput" matInput maxlength="1" value="a" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,3,'Q8')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,4,'Q8')" />
+        <input class="answerinput" matInput maxlength="1" value="e" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,6,'Q8')" />
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="h" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q9')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q9')" />
+        <input class="answerinput" matInput maxlength="1" value="d" />
+        <input class="answerinput" matInput maxlength="1" value="p" />
+        <input class="answerinput" matInput maxlength="1" value="h" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,6,'Q9')" />
+        <input class="answerinput" matInput maxlength="1" value="n" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,8,'Q9')" />
+    </div>
+    <div class="row">
+        <input class="answerinput" matInput maxlength="1" value="f" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,1,'Q10')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,2,'Q10')" />
+        <input class="answerinput" matInput maxlength="1" value="s" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,4,'Q10')" />
+        <input class="answerinput" matInput maxlength="1" value="d" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,6,'Q10')" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,7,'Q10')" />
+        <input class="answerinput" matInput maxlength="1" value="v" />
+        <input class="answerinput" matInput maxlength="1" (input)="fillAnswer($event,9,'Q10')" />
+    </div>
+    <button mat-raised-button color="primary" type="submit" style="text-align:center;margin-top:25px"
+        (click)="submitKinesticLevel3()">
+        Submit
+    </button>
+</div>
+<!-- KINESTIC LEVEL ENDS -->
+<div class="spinner" *ngIf="isProgressSpinner">
+    <mat-spinner></mat-spinner>
+</div>

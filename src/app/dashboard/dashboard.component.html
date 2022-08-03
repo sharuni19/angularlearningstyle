@@ -1,0 +1,88 @@
+<mat-toolbar *ngIf="dashboardcontent">
+    <span>Learning Style Detection</span>
+    <span class="spacer"></span>
+    <div class="dashboard-icons">
+        <div class="rating-icon">
+            <button mat-icon-button aria-label="Example icon-button with heart icon" (click)="openRatingDialog()">
+                <mat-icon>stars</mat-icon>
+                Leave a Rating
+            </button>
+        </div>
+        <div class="progress-icon">
+            <mat-progress-spinner [matTooltip]="totalProgressToolTipContent" class="spinner-margin" [color]="color"
+                [mode]="mode" [value]="totalProgress" diameter="40">
+            </mat-progress-spinner>
+            <img class="trophy-image" src="assets/TrophyCup.svg" alt="Trophy Cup" />
+        </div>
+        <div class="user-icon">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example
+        icon-button with heart icon">
+                <img src="assets/Useravartar.svg" alt="User Avatar" />
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="getProfilePage()">Profile</button>
+                <button mat-menu-item (click)="getSignOut()">Sign Out</button>
+            </mat-menu>
+        </div>
+    </div>
+</mat-toolbar>
+<mat-accordion class="dashboard-accordion" *ngIf="dashboardcontent">
+    <mat-expansion-panel hideToggle [expanded]="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h2>Subjects</h2>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="subjects-list">
+            <div class="english-subject">
+                <mat-card class="english-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <h2>English</h2>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <img mat-card-image (click)="goToEnglishActivityPortal()" src="assets/english.jpeg"
+                            alt="English subject" />
+                    </mat-card-content>
+                    <mat-card-footer>
+                        <mat-progress-bar mode="determinate" [matTooltip]="englishToolTipContent"
+                            [value]="englishCompletedValue"></mat-progress-bar>
+                    </mat-card-footer>
+                </mat-card>
+            </div>
+            <div class="computerscience">
+                <mat-card class="computerscience-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <h2>Computer Science</h2>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <img mat-card-image (click)="goToComputerScienceActivityPortal()"
+                            src="assets/ComputerScience.png" alt="Computer Science subject" />
+                    </mat-card-content>
+                    <mat-card-footer>
+                        <mat-progress-bar mode="determinate" [matTooltip]="computerScienceToolTipContent"
+                            [value]="computerScienceCompletedValue"></mat-progress-bar>
+                    </mat-card-footer>
+                </mat-card>
+            </div>
+        </div>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title> Favorite Levels in English </mat-panel-title>
+        </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-divider></mat-divider>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title> Favorite Levels in Computer Science </mat-panel-title>
+        </mat-expansion-panel-header>
+    </mat-expansion-panel>
+</mat-accordion>
+<div class="spinner" *ngIf="isProgressSpinner">
+    <mat-spinner></mat-spinner>
+</div>

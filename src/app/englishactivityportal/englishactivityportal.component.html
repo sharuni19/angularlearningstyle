@@ -1,0 +1,80 @@
+<div class="english-activity-portal-header" *ngIf="englishactivityContent">
+  <div class="english-subject-container">
+    <div class="container-content-subject-name">
+      <h1>English</h1>
+    </div>
+
+    <div class="container-content-progressbar">
+      <span class="point-left">{{englishCompletedValue}}% Completed</span>
+      <mat-progress-bar mode="determinate" [value]="englishCompletedValue"></mat-progress-bar>
+      <p>Rank:{{rank}} | Points: {{points}}</p>
+    </div>
+
+    <div class="container-content-logo">
+      <img src="assets/english.jpeg" (click)="backtodashboard()" style="width:100px">
+    </div>
+  </div>
+</div>
+<div class="level-content" *ngIf="englishactivityContent">
+  <div class="level-list">
+    <div class="level-container">
+      <div class="level-sub-container">
+        <section>
+          <mat-list role="list">
+            <mat-list-item role="listitem" class="level-list-item" *ngFor="let level of levels">
+              <mat-card class="english-activity-card">
+                <mat-card-title class="english-activity-level-title">{{
+                  level.Level
+                  }}</mat-card-title>
+                <mat-card-content>
+                  <div class="english-activity-description">
+                    <p>{{ level.Description }}</p>
+                    <div class="english-activity-favorite-icon">
+                      <span style="cursor: pointer;"><i class="fa-thin fa-heart"></i></span>
+                    </div>
+                    <div class="english-activity-button">
+                      <button mat-raised-button *ngIf="!level.Completed" color="primary" type="submit"
+                        (click)="proceedActivity(level)">
+                        GO
+                      </button>
+                      <button mat-raised-button *ngIf="level.Completed" color="primary" type="submit" disabled>
+                        COMPLETED
+                      </button>
+                    </div>
+                  </div>
+                  <div *ngIf="isLearningTypeIdentified">
+                    <p>Learning Type: <b>{{learningType}}</b></p>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+            </mat-list-item>
+          </mat-list>
+        </section>
+        <section class="filter-section">
+          <div class="english-activity-filter">
+            <h4 class="filter-label">STATUS</h4>
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+              [(ngModel)]="selectedStatus">
+              <mat-radio-button class="status-radio-button" *ngFor="let data of status" [value]="data"
+                (change)="getStatusFilter($event)">
+                {{ data }}
+              </mat-radio-button>
+            </mat-radio-group>
+            <mat-divider></mat-divider>
+            <h4 class="filter-label">LEVEL</h4>
+            <mat-radio-group aria-labelledby="example-radio-group-label" class="status-radio-group"
+              [(ngModel)]="selectedStatus">
+              <mat-radio-button class="status-radio-button" *ngFor="let data of levelName" [value]="data"
+                (change)="getLevelFilter($event)">
+                {{ data }}
+              </mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="spinner" *ngIf="isProgressSpinner">
+  <mat-spinner></mat-spinner>
+</div>

@@ -1,0 +1,28 @@
+<div class="signin-content" *ngIf="isLoginPage">
+    <mat-card>
+        <mat-card-content>
+            <p>Please login to continue</p>
+            <mat-form-field class="full-width-input">
+                <input matInput placeholder="Email" [(ngModel)]="email" required />
+                <mat-error *ngIf="invalidMail">
+                    Please inform your user name
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input">
+                <input matInput type="password" [(ngModel)]="password" placeholder="Password" required />
+                <mat-error *ngIf="invalidPassword">
+                    Please inform your password
+                </mat-error>
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit" (click)="onSubmit()">Login</button>
+            <div>
+                <p style="padding-top:10px">Please Click Sign-up If you don't have an account</p><a
+                    [routerLink]="['/register']">Sign Up</a>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>
+<div class="spinner" *ngIf="isProgressSpinner">
+    <mat-spinner></mat-spinner>
+</div>

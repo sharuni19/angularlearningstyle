@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Leave a Rating</h1>
+<div mat-dialog-content>
+    <mat-form-field class="rating-full-width" appearance="fill">
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput placeholder="Enter your Rating..." [(ngModel)]="rating"></textarea>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close [mat-dialog-close]="rating">Submit</button>
+</div>
